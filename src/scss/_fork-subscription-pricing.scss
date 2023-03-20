@@ -1,0 +1,206 @@
+.fork-subcription-pricing-section {
+  background-image: url(../img/backgrounds/fork-subscription-pricing-background.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.fork-subcription-pricing-section-title {
+  @include main-font-bold;
+  text-align: center;
+  padding: 14px 0px 32px;
+  font-size: 28px;
+  line-height: 42px;
+  color: $second-color;
+  @media screen and (min-width: 481px) {
+    font-size: 42px;
+    line-height: 44px;
+    padding: 88px 0px 39px;
+  }
+  @media screen and (min-width: 993px) {
+    font-size: 48px;
+    line-height: 50px;
+    padding: 112px 0px 61px;
+  }
+}
+
+.pricing-section {
+  display: grid;
+  margin: 0 auto;
+  gap: 18px;
+  padding: 50px 0px 97px;
+  grid-template-columns: 1fr;
+  grid-template-areas:
+    "students"
+    "professional"
+    "agency"
+    "enterprise";
+
+  &__item {
+    width: 85%;
+    min-width: 85%;
+    padding-bottom: 37px;
+    align-self: center;
+    background-color: $pricing-section-card-back-light;
+    margin: 0 auto;
+    &.active {
+      width: 100%;
+      background-color: $pricing-section-card-back-dark;
+      padding-bottom: 47px;
+    }
+  }
+
+  &__students {
+    grid-area: students;
+  }
+
+  &__professional {
+    grid-area: professional;
+  }
+
+  &__agency {
+    grid-area: agency;
+  }
+
+  &__enterprise {
+    grid-area: enterprise;
+  }
+
+  &__title {
+    text-align: center;
+    padding: 36px 0px;
+    text-transform: uppercase;
+    @include main-font;
+    color: $second-color;
+    font-size: 24px;
+    line-height: 24px;
+    background-color: $pricing-section-card-title-light;
+    &.active {
+      background-color: $pricing-section-card-title-dark;
+      padding: 48px 0px;
+    }
+  }
+
+  &__price {
+    text-align: center;
+    padding: 36px 0px 20px;
+    text-transform: uppercase;
+    @include main-font;
+    color: $second-color;
+    font-size: 60px;
+    line-height: 90px;
+    &.active {
+      font-size: 82px;
+      padding: 25px 0px;
+    }
+  }
+
+  &__period {
+    text-align: center;
+    padding-bottom: 37px;
+    text-transform: uppercase;
+    @include main-font;
+    color: $second-color;
+    font-size: 14px;
+    line-height: 16px;
+    &.active {
+      padding-bottom: 50px;
+    }
+  }
+
+  &__underline {
+    background-color: $main-color;
+    margin: 0 auto;
+    width: 60px;
+    height: 5px;
+  }
+
+  &__license {
+    text-align: center;
+    padding: 30px 0px 48px;
+    @include main-font;
+    color: $second-color;
+    font-size: 16px;
+    line-height: 18px;
+    &.active {
+      padding: 45px 0px 88px;
+    }
+  }
+
+  &__btn {
+    display: block;
+    text-decoration: none;
+    text-transform: uppercase;
+    @include main-font;
+    font-size: 15px;
+    line-height: 15px;
+    color: $second-color;
+    text-align: center;
+    max-width: 163px;
+    margin: 0 auto;
+    background-color: $pricing-section-card-btn-back;
+    border-radius: 40px;
+    padding: 15px 0px;
+    transition: 0.3s;
+    &:hover {
+      background-color: $pricing-section-card-btn-back-hover;
+    }
+    &.active {
+      font-size: 16px;
+      line-height: 18px;
+    }
+  }
+
+  @media screen and (min-width: 481px) {
+    width: 85%;
+    gap: 0px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas:
+      "students professional"
+      "agency enterprise";    
+
+    &__item {
+      width: 90%;
+    }
+
+    &__students {
+      margin-left: 25px;
+    }
+
+    &__professional {
+      margin-left: 25px;
+    }
+
+    &__enterprise {
+      margin-left: 25px;
+    }
+  }
+
+  @media screen and (min-width: 993px) {
+    width: 100%;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: "students professional agency enterprise";
+    gap: 15px;
+
+    &__item {
+      width: 100%;   
+          
+      &.active {
+        width: 100%;
+        min-width: 312px;               
+      }
+    }
+    &__students {
+      margin-left: 0px;
+    }
+
+    &__professional {
+      margin-left: 0px;
+    }
+
+    &__enterprise {
+      margin-left: 0px;
+    }
+  }
+}

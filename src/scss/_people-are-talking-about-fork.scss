@@ -1,0 +1,76 @@
+@import "mixins";
+@import "variables";
+
+.section2 {
+  background-image: url("../img/backgrounds/people-are- talking-about- fork-background.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding-top: 108px;  
+  &__content {
+    @include flex-column-center;
+    padding-bottom: 50px;
+  }
+
+  &__title {
+    @include main-font-bold;
+    font-size: 48px;
+    color: $second-color;
+    margin-bottom: 82px;
+    text-align: center;
+    @media screen and (max-width: 992px) {
+      font-size: 42px;
+    }
+    @media screen and (max-width: 992px) {
+      font-size: 36px;
+    }
+  }
+  &__blocks {
+    @include flex-space;
+    text-align: center;
+    flex-wrap: wrap;
+    @media screen and (max-width: 480px) {
+      justify-content: center;
+    }
+  }
+
+  &__item {
+    width: 320px;
+    margin-bottom: 116px;
+    @include flex-column-center;
+    gap: 22px;
+    @media screen and (max-width: 665px) {
+      width: 220px;
+    }
+    @media screen and (max-width: 480px) {
+      width: 270px;
+    }
+  }
+
+  &__text {
+    @include second-font-italic;
+    color: $second-color;
+    font-size: 16px;
+  }
+
+  &__footer {
+    @include second-font;
+    color: #a291a5;
+    font-size: 14px;
+    text-align: center;
+    max-width: 887px;
+    position: relative;
+  }
+
+  &__footer::after {
+    content: "";
+    border: 1px solid #645766;
+    width: 80%;
+    height: 0.5px;
+    position: absolute;
+    bottom: -18px;
+    left: 0;
+    right: 0;
+    margin: auto;
+  }
+}

@@ -1,0 +1,102 @@
+.revolutionary-editor-section {
+  &__promo {
+    @include main-font;
+    font-size: 14px;
+    line-height: 14px;
+    text-align: center;
+    margin-top: 50px;
+    color: $revolutionary-section-promo;
+  }
+  &__title {
+    @include main-font-bold;
+    font-size: 26px;
+    line-height: 28px;
+    text-align: center;
+    margin: 80px 0px 27px;
+    color: $revolutionary-section-title;
+    text-transform: uppercase;
+  }
+
+  &__text {
+    @include second-font;
+    font-size: 14px;
+    line-height: 20px;
+    text-align: center;
+    margin: 0 auto;
+    color: $revolutionary-section-text;
+    max-width: 276px;
+    padding-bottom: 36px;
+  }
+
+  &__btn-block {
+    @include flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    list-style: none;
+    gap: 10px;
+    padding-bottom: 68px;
+    max-width: 280px;
+    margin: 0 auto;
+  }
+
+  &__btn-block-item {
+    border: 1px solid $revolutionary-section-btn;
+    border-radius: 5px;
+    @include flex;
+    flex-direction: row;
+    justify-content: center;
+    @include main-font-bold;
+    font-size: 12px;
+    margin-bottom: 20px;
+  }
+
+  &__btn-block-item-link {
+    display: flex;
+    text-decoration: none;
+    padding: 6px 9px 6px 11px;
+    border-right: 1px solid $revolutionary-section-btn;
+    background-color: $revolutionary-section-btn-link-back;
+    transition: 0.3s;
+    &:hover {
+      background-color: $revolutionary-section-btn-link-back-hover;
+    }
+    color: $revolutionary-section-btn-in;
+    & svg {
+      margin-right: 3px;
+    }      
+  }
+
+    &__btn-block-item-actions {
+      padding: 6px 13px 6px 13px;
+      user-select: none;
+    }
+
+  @media screen and (min-width: 481px) {
+    &__title {
+      font-size: 42px;
+      line-height: 42px;
+      margin: 94px 0px 35px;
+    }
+    &__text {
+      font-size: 21px;
+      line-height: 32px;
+      max-width: 689px;
+    }
+
+    &__btn-block {
+      max-width: 100%;
+    }
+  }
+
+  @media screen and (min-width: 993px) {
+    &__title {
+      font-size: 54px;
+      line-height: 54px;
+      margin: 66px 0px 35px;
+    }
+    &__text {
+      max-width: 861px;
+    }
+  }
+}

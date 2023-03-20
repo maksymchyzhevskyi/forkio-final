@@ -1,0 +1,24 @@
+@import 'variables';
+@import 'mixins';
+@import 'header';
+@import 'revolutionary-editor';
+@import 'here-is-what-you-get';
+@import 'people-are-talking-about-fork';
+@import 'fork-subscription-pricing';
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.container {
+  max-width: 1200px;
+  min-width: 320px;
+  margin: 0 auto;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+html,
+body {
+  overflow-x: hidden;
+}
